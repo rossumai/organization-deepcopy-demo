@@ -29,5 +29,4 @@ As an example of what the organization group means and what the organizaion grou
 ## Sharing other users among multiple organizations
 Of course, more user roles can be shared among multiple organizations. E.g. admin user George can be assigned to the German and French department where he will check the setup of the organization. Please read [how to assign the user to another organization](https://api.elis.rossum.ai/docs/#create-new-membership). However, keep in mind that such action can be done only by organization group admin.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7MvitiSEp0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<a href="https://www.youtube.com/embed/7MvitiSEp0I">Please watch a video about Sharing of users in Rossum here</a> 
