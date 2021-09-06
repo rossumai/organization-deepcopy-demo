@@ -442,21 +442,6 @@ def create_extensions(new_queues_mapping, original_extensions, token, user_url):
 
         new_extensions.append(response)
 
-        # Exceptions
-
-        if "id" in extension["metadata"] and extension["metadata"]["id"] == "po_matching_extension":
-
-            master_data = extension["metadata"]["master_data"]
-
-            target_queues = [new_queues_mapping[x].split("/")[-1] for x in extension["queues"]]
-
-            upload_master_data_to_data_matching(token, target_queues, master_data, "po_number", "purchase_orders")
-
-        if response.status_code == 201:
-            print("Creating extension '{0}' - OK".format(extension["name"]))
-        else:
-            print("Creating extension '{0}' - ERROR".format(extension["name"]))
-
     return new_extensions
 
 
@@ -512,12 +497,15 @@ def login_to_data_matching_with_token(token):
     response = session.post("https://data-matching.elis.rossum.ai/api/v1/auth/token_login", headers=headers)
 
     global HTTP_COOKIE
+
     HTTP_COOKIE = session.cookies.get_dict()["session"]
 
     if response.status_code == 200:
         print("Logging in to data matching - OK")
     else:
         print("Logging in to data matching - ERROR")
+
+    print(response.text)
 
     return response.json()
 
@@ -564,7 +552,7 @@ def get_parser():
     arg_parser.add_argument('--token', help='Token gained after logging to the Rossum API', metavar="token", type=str)
 
     # other arguments here ...
-    return parser
+    return arg_parser
 
 
 # Press the green button in the gutter to run the script.
