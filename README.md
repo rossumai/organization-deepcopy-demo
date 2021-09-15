@@ -31,6 +31,11 @@ Example of the config for running the script:
 python orgs_deep_copy_scripy.py --org_name "German department" --username "myusername@email.ai" --email "myusername@email.ai" --password "<YOUR_PASSWORD>" --create_key "<YOUR_ORG_GROUP_CREATE_KEY>" --token "<YOUR_USER_AUTH_TOKEN>"
 ```
 
+The template organization is identified by special key in [metadata attribute of the organization object](https://api.elis.rossum.ai/docs/#organization). In general, you can store any of your customer keys in the metadata object. For the purpose of this script the metadata object contains value:
+```
+"id": "master_data_organization"
+```
+
 ## Sharing other users among multiple organizations
 Of course, more user roles can be shared among multiple organizations. E.g. admin user George can be assigned to the German and French department where he will check the setup of the organization. Please read [how to assign the user to another organization](https://api.elis.rossum.ai/docs/#create-new-membership). However, keep in mind that such action can be done only by organization group admin.
 
