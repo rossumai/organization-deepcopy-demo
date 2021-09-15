@@ -16,11 +16,11 @@ For easier managemement of the organizations within the organization group we ha
 2. Get auth [token to any organization within the organization group](https://api.elis.rossum.ai/docs/#generate-a-token-to-access-the-organization) (with the auth token from the users primary organization)
 3. Allow specific users (admins, annotators, managers) to access multiple organizations from the organization group
 
-## Org group admin
+## Organization group admin
 Organization group admin is a user who can access all the organizations in the organization group by default. The [organization group admin role](https://api.elis.rossum.ai/docs/#retrieve-all-membership-organizations) cannot be set over the API. Such a role can be setup for one of your users only by contacting your Rossum's key point of contact. In the UI this user cannot be deactivated by any other user since the user is responsible for managing the whole organization group.
 
 ## What does deep-copy of an organization mean?
-As an example of what the organization group means and what the organizaion group admin can do, we have prepared a script that:
+As an example of what the organization group means and what the organization group admin can do, we have prepared a script that:
 1. Let's you create a new organization in given organization group
 2. Lists all organizations in the given group and finds the one organization that is used as a "template"  organization in your org group.
 3. Fetches all objects that should be copied from the template organization
