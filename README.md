@@ -27,13 +27,14 @@ As an example of what the organization group means and what the organizaion grou
 4. Initializes the new organization to the same setup as the "template" organization
 
 Example of the config for running the script:
-`python orgs_deep_copy_scripy.py --org_name "German department" --username "myusername@email.ai" --email "myusername@email.ai" --password "<YOUR_PASSWORD>" --create_key "<YOUR_ORG_GROUP_CREATE_KEY>" --token "<YOUR_USER_AUTH_TOKEN>"
-
+```
+python orgs_deep_copy_scripy.py --org_name "German department" --username "myusername@email.ai" --email "myusername@email.ai" --password "<YOUR_PASSWORD>" --create_key "<YOUR_ORG_GROUP_CREATE_KEY>" --token "<YOUR_USER_AUTH_TOKEN>"
+```
 
 ## Sharing other users among multiple organizations
 Of course, more user roles can be shared among multiple organizations. E.g. admin user George can be assigned to the German and French department where he will check the setup of the organization. Please read [how to assign the user to another organization](https://api.elis.rossum.ai/docs/#create-new-membership). However, keep in mind that such action can be done only by organization group admin.
 
-![User in multiple organizations](https://ibb.co/BrsG0DQ)
+![Users in multiple organizations](https://ibb.co/BrsG0DQ)
 
 <a href="https://www.youtube.com/embed/7MvitiSEp0I">Please watch a video about Sharing of users in Rossum here</a> 
 
