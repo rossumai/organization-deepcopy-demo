@@ -34,7 +34,7 @@ python orgs_deep_copy_scripy.py --org_name "German department" --username "myuse
 ## Sharing other users among multiple organizations
 Of course, more user roles can be shared among multiple organizations. E.g. admin user George can be assigned to the German and French department where he will check the setup of the organization. Please read [how to assign the user to another organization](https://api.elis.rossum.ai/docs/#create-new-membership). However, keep in mind that such action can be done only by organization group admin.
 
-![Users in multiple organizations](https://ibb.co/BrsG0DQ)
+![Users in multiple organizations](https://github.com/rossumai/organization-deepcopy-demo/blob/main/Sharing%20users.png)
 
 <a href="https://www.youtube.com/embed/7MvitiSEp0I">Please watch a video about Sharing of users in Rossum here</a> 
 
