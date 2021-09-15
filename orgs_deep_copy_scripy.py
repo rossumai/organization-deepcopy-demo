@@ -54,13 +54,14 @@ def login_to_specific_organization(organization_url, token):
     return response.json()["key"]
 
 
-def assign_membership(user_url, organization_url, token):
+def assign_membership(user_url, organization_url, org_group_id, token):
 
     """
     User can be assigned to non-primary organization. Memberships can be created only by organization group admin user.
     Such a user role can be assigned only by Rossum's support team.
     :param user_url: The user of the user to be assigned.
     :param organization_url: The organization where the user should be assigned
+    :param org_group_id: The ID of the organization group where the membership will be created
     :param token: Auth token from the primary organization.
     :return: dict
     """
@@ -71,7 +72,7 @@ def assign_membership(user_url, organization_url, token):
     }
 
     headers = {"Authorization": "token {0}".format(token)}
-    response = requests.post("https://api.elis.rossum.ai/v1/memberships", headers=headers, data=payload)
+    response = requests.post("https://api.elis.rossum.ai/v1/organization_groups/{0}/memberships".format(org_group_id), headers=headers, data=payload)
 
     return response
 
